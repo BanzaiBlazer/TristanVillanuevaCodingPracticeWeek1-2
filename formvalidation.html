@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.correct {
+				border: 5px solid green;
+			}
+			.incorrect {
+				border: 5px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		  <label form="username">Username</label>
+		  <input type="text" name="username" id="username">
+		  <label form="password">Password</label>
+		  <input type="password" name="password" id="password">
+		  <input type="submit" value="Submit" id="submit">
+		</form>
+​
+		<p id="validity">Please enter username and password</p>
+
+		<p>Change me!</p>
+		<h1>Nope</h1>
+		<h1>Nope too</h1>
+		<h1>Nope also</h1>
+
+		<img src="http://ohtoptens.com/wp-content/uploads/2015/05/Grumpy-Cat-NO-1.jpg"></img>
+​
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			var correctUsername = "step";
+			var correctPassword = "math";
+			$("#password").on("keyup", function(event){
+				if ($("#password").val() === correctPassword){
+					console.log($("#password").val());
+					$("#validity").removeClass("incorrect");
+					$("#validity").addClass("correct");
+				}else{
+					console.log($("#password").val());
+					$("#validity").removeClass("correct");
+					$("#validity").addClass("incorrect");
+				}
+			});
+
+		$("#submit").on("click", function(event){
+			$("#validity").html("whats up?")();
+			});
+
+/*		Always, when you are editing with jQuery, get either the script of jQuery on your script head, or put it on your console. */
+
+//		Chooses an array of a web element
+
+		var secondHeader = $("h1")[1]; 
+		$(secondHeader).text("New Text");
+
+		$("h1").css("color", "green");
+
+// images
+
+		$("img").attr("src","http://static5.businessinsider.com/image/511d104a69bedd1f7c000012/grumpy-cat-definitely-did-not-make-100-million.jpg");
+
+		</script>
+	</body>
+</html>

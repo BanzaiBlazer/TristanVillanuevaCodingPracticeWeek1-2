@@ -1,0 +1,63 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<body>
+<script>
+	/* a global scope, accessed globally, within almost any part of the script. if its not linked to a function, like the jquery script from the internet, then you can use it on anywhere
+	*/
+	var londonbridge = "falling down";
+
+	// end of global function example
+
+	// ---------------------------------------
+
+	/* a variable scope, accessed within the function, in the function, if its under a function, then its a scoped variable, if its inside a function, you cannot call it as a global variable, and therefore cannot call it in the code anywhere, so you must call the function before you can use any of its functions
+	*/
+	
+	console.log(window.stars, window.stripes, window.bleed);
+	
+	function scopeAlphaCentuari(){
+		var stars = 40+1;
+		stripes = 22;
+		var bleed="blue";
+	}
+
+	scopeAlphaCentuari();
+
+	console.log(window.stars, window.stripes, window.bleed);
+
+	// end of variable scope example
+
+	if (5+7 === 13) {
+		londonbridge = "staying";
+	}else{
+		londonbridge = "my fair lady";
+	}
+
+	console.log(londonbridge)
+
+var z = 3;
+
+function some_f(){
+	var z = 5;
+	console.log("some_f():",z);
+}
+
+console.log("global 1",z);
+
+some_f();
+
+function some_q(){
+	var z = 7;
+	console.log("some_q():",z);
+}
+
+console.log("global 2",z);
+
+some_q();
+
+
+</script>
+</body>
+
+</html>

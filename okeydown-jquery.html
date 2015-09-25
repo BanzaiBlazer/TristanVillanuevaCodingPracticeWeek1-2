@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+        </script>
+    </head>
+    <body>
+        <input id="password1" type="password" placeholder="input password"/>
+
+        <button id="button1" onclick=$(clickMe)>Click Me!</button>
+​
+        <script>
+            function clickMe(event){
+                console.log("I've been clicked!");
+            }
+
+            var button1 = document.getElementById("button1");
+
+            var password1 = document.getElementById("password1");
+            password1.onkeydown = function(event){
+                console.log("keycode: " + event.which);
+                console.log("current password typed in: " + password1.value);
+            }
+        </script>
+    </body>
+</html>

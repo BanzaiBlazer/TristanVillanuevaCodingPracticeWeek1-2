@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button id="button0">animate odd elements to fadeOut</button>
+        <button id="button1">animate even elements to marginLeft</button>
+
+        <p class="evenarticle" id="p0"><b>Kittens Article</b></p>
+        <p class="oddarticle" id="p1"><b>Puppies Article</b></p>
+        <p class="evenarticle" id="p2">M-4A1 Article</p>
+        <p class="oddarticle" id="p3">AK-47 Article</p>
+        <p class="evenarticle" id="p4">Electrician Jobs</p>
+        <p class="oddarticle" id="p5">Nurse Retirement Plans</p>
+        <p class="evenarticle" id="p6">Graphic Designer Tools</p>
+        <p class="oddarticle" id="p7">RoflCopters</p>
+        <p class="evenarticle" id="p8">LolDogs/p>
+        <p class="oddarticle" id="p9">LolCats</p>
+
+<script>
+            $("#button0").on("click", function(){
+                $(".even").show( function(){
+                      $(".even").fadeOut(500);
+                });
+            });
+
+            $("#button1").on("click", function(){
+                $(".odd").hide( function(){
+                      $(".odd").animate( {marginLeft += 20px}, 500 );
+                });
+            });
+</script>
+
+    </body>
+</html>

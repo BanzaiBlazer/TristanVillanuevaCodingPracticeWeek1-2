@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<input type="text" id="name" placeholder="insert name">
+		<button onclick="checkName()">checkName()</button>
+		<p id="complainer">How long is your name?</p>
+		<script>
+			function checkName(){
+				var name = document.getElementById("name").value;
+				var complainer = document.getElementById("complainer");
+​
+				if (name.length < 7){
+					complainer.innerHTML = "Your name is fine";
+				}
+				else if (name.length <= 9){
+					complainer.innerHTML = "Your name," + name + " , is a little long in the tooth, but it's fine by me.";
+				}
+				else if (name === "Justin Bardliving"
+					  || name === "Troy Starwalt"
+					  || name.startsWith("N")){
+					complainer.innerHTML = "Oh man, that's a cool name you got there.";
+				}
+				else {
+					complainer.innerHTML = "Your name is <b>too long</b>. You should consider changing it. For the greater good.";
+​
+					alert("Change your name, please");
+				}
+			}
+​
+		</script>
+	</body>
+</html>

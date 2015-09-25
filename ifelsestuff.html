@@ -1,0 +1,26 @@
+<html>
+<body>
+	<script>
+		function checkName(){
+			var name = document.getElementById("name").value;
+			var con = document.getElementById("con");
+			if(name.length < 7){
+				con.innerHTML = "Your name is fine.";
+			}
+			else if(name.length === 7){
+				con.innerHTML = "Your name is seven letters long, but thats borderline for me...";
+			}else{
+				con.innerHTML = "Damn, your name is too long! Get a legal name change!";
+			}
+		}
+	</script>
+
+	<p>I'll tell you if your name is too damn long...</p>
+	<p id="con"><p>
+	<input type="text" id="name" placeholder="Place your damn name here">
+		<button onclick="checkName()">Check Your Name</button>
+	</input>
+
+</body>
+
+</html>

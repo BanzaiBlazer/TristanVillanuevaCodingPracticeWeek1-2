@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>getElementById example</title>
+  <script>
+  function changeColor(newColor) {
+    var wordcolor = document.getElementById("coloredword");
+    wordcolor.style.color = newColor;
+  }
+  </script>
+</head>
+
+<body>
+  <p id="coloredword">Some text here</p>
+  <button onclick="changeColor('blue');">blue</button>
+  <button onclick="changeColor('red');">red</button>
+</body>
+</html>

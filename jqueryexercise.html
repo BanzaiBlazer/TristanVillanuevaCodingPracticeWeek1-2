@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button id="button0">show, then animate opacity to 0.5</button>
+        <button id="button1">hide, bring opacity to 1.0</button>
+        <button id="button2">make odd elements go right, undoable</button>
+
+        <p class="even" id="p0">Hello 0</p>
+        <p class="odd" id="p1">Hello 1</p>
+        <p class="even" id="p2">Hello 2</p>
+        <p class="odd" id="p3">Hello 3</p>
+        <p class="even" id="p4">Hello 4</p>
+        <p class="odd" id="p5">Hello 5</p>
+        <p class="even" id="p6">Hello 6</p>
+        <p class="odd" id="p7">Hello 7</p>
+        <p class="even" id="p8">Hello 8</p>
+        <p class="odd" id="p9">Hello 9</p>
+
+        <div>
+            <p class="even" id="p10">Hello 10</p>
+        </div>
+
+        <div>
+            <div>
+                <p class="odd" id="p11">Hello 11</p>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <script>
+            // $(".even").animate( {
+            //   opacity: 0.25,
+            //   marginLeft: "50%",
+            //   marginTop: "20%"
+            // } , 2000 );
+
+            // $(".odd").animate( {
+            //   opacity: 0.25,
+            //   color: "orange",
+            //   marginLeft: "30%",
+            //   marginTop: "10%"
+            // } , 2000 );
+
+            // $(".even").click(function(event){
+            //     console.log(event.target.outerHTML);
+            // });
+
+            $(".even").on("click", function(event){
+                console.log(event.target.outerHTML);
+            });
+
+            $("#button0").on("click", function(){
+                $(".even").show( function(){
+                      $(".even").animate( {opacity: .5}, 500 );
+                });
+            });
+
+            $("#button1").on("click", function(){
+                $(".even").hide( function(){
+                      $(".even").animate( {opacity: 1.0}, 500 );
+                });
+            });
+
+            $("#button2").on("click", function(){
+                $(".odd").show( function(){
+                      $(".odd").animate( {marginLeft: 67}, 5000 );
+                });
+            });
+        </script>
+    </body>
+</html>

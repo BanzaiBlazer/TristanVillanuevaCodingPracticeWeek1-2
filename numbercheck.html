@@ -1,0 +1,57 @@
+<html>
+<body>
+
+	<p>Input some number, ANY number.</p>
+	<input type="text" id="number">
+		<button onclick="CheckitOut();">Check yo number</button>
+	</input>
+	<p id="text"></p>
+
+<script>
+
+	function isEven(number) {
+	// if the remainder of the number when divided 
+	// by 2 is 0, then it's an even number.
+	return number % 2 == 0;
+}
+	function isOdd(number) {
+	// fill this in, you can define in terms of isEven
+	return !isEven(number);
+}
+
+	function CheckitOutToo(){
+		var otherinfo = document.getElementById("otherinfo");
+		if (!isEven(number)){
+			otherinfo.innerHTMl = "Odd number.";
+		}else{
+			otherinfo.innerHTMl = "Even number.";
+		}
+	}
+
+	function CheckitOut(){
+			var number = document.getElementById("number").value;
+			var text = document.getElementById("text");
+
+	if (number < 10) {
+		alert("That's an uncool number.");
+	}
+	else if ((number > 10) && (number < 100)) {
+		if (isEven(number)) {
+			alert("That's a pretty cool number. Even number ");
+		}
+		else if (isOdd(number)) {
+			alert("That's an ugly number. Odd number");
+		}
+		else {
+			alert("That's an okay number.");
+		}
+	}	
+	else {
+		alert("Whatever dude. Over 100!");
+	}
+}
+
+</script>
+
+<body>
+<html>

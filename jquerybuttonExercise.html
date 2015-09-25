@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <button id="button1">animate odd elements to fadeOut</button>
+        <button id="button0">animate even elements to marginLeft</button>
+
+        <p class="evenarticle" id="p0"><b>Kittens Article</b></p>
+        <p class="oddarticle" id="p1"><b>Puppies Article</b></p>
+        <p class="evenarticle" id="p2">M-4A1 Article</p>
+        <p class="oddarticle" id="p3">AK-47 Article</p>
+        <p class="evenarticle" id="p4">Electrician Jobs</p>
+        <p class="oddarticle" id="p5">Nurse Retirement Plans</p>
+        <p class="evenarticle" id="p6">Graphic Designer Tools</p>
+        <p class="oddarticle" id="p7">RoflCopters</p>
+        <p class="evenarticle" id="p8">LolDogs/p>
+        <p class="oddarticle" id="p9">LolCats</p>
+
+<script>
+            // How to call a function:
+
+             //   function(name-of-function){
+             //         code to be executed
+             //         }
+
+            $("#button1").click(function(){
+                      $(".oddarticle").fadeOut(50);
+            });
+
+            $("#button0").click(function(){
+                      $(".evenarticle").animate( {marginLeft: 20}, 50 );
+            });
+</script>
+
+    </body>
+</html>
